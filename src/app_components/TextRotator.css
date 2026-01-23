@@ -1,0 +1,26 @@
+.text-rotator-container {
+  height: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.text-item {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  color: #00BC91;
+}
+
+.text-item.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.text-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
