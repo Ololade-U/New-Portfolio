@@ -16,18 +16,16 @@ const Services = () => {
     if (isInView) {
       setActiveNav("Service");
     }
-    // Dependency array: runs only when isInView or setActiveNav changes.
-    // setActiveNav is usually stable (part of the store), so it effectively runs only on isInView changes.
   }, [isInView, setActiveNav]);
   return (
     <>
       <Box
         ref={componentRef}
         p={"2rem 1rem"}
-        w={{mdDown : '93vw'}}
+        w={{ mdDown: "93vw" }}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
-        mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
+        mb={{ mdTo2xl: "3rem", mdDown: "1.5rem" }}
         id="services"
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
@@ -56,7 +54,10 @@ const Services = () => {
                 Services
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={{mdTo2xl : "1.1rem", mdDown : '1rem'}}>
+            <Text
+              color={"#999999"}
+              fontSize={{ mdTo2xl: "1.1rem", mdDown: "1rem" }}
+            >
               Your business deserves solutions that are as unique and dynamic as
               your vision. I offer a wide range of services designed to meet the
               diverse needs of my clients, from creative design to technical
@@ -64,16 +65,17 @@ const Services = () => {
             </Text>
             <HStack
               w={"100%"}
-              justifyContent={{mdTo2xl : "space-between", mdDown : 'center'}}
+              justifyContent={{ mdTo2xl: "space-between", mdDown: "center" }}
+              alignItems={'stretch'}
               flexWrap={"wrap"}
               gap={"2rem"}
             >
               <Box
                 display={"flex"}
                 flexDirection={"column"}
-                gap={"1rem"}
+                gap={"2rem"}
                 border={"1px solid #3d3d3dff"}
-                w={{mdTo2xl : "47%"}}
+                w={{ mdTo2xl: "47%" }}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -94,7 +96,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 1 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
+                    fontSize={{ mdTo2xl: "7xl", mdDown: "5xl" }}
                   >
                     01
                   </Heading>
@@ -104,14 +106,17 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
-                  Project Management
+                <Heading
+                  color={"white"}
+                  fontSize={{ mdTo2xl: "2xl", mdDown: "xl" }}
+                >
+                  Website Design
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
-                  I offer IT project management services that keep your projects
-                  on track, within budget, and aligned with your strategic
-                  goals. From planning to execution, I manage every aspect with
-                  attention to detail.
+                  From concept to launch, I create responsive, user-friendly
+                  websites that stand out. My designs are not only visually
+                  appealing but also optimized for performance and user
+                  experience
                 </Text>
               </Box>
               <Box
@@ -119,7 +124,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={{mdTo2xl : "47%"}}
+                w={{ mdTo2xl: "47%" }}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -140,7 +145,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 2 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
+                    fontSize={{ mdTo2xl: "7xl", mdDown: "5xl" }}
                   >
                     02
                   </Heading>
@@ -150,14 +155,18 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
-                  Microsoft Office
+                <Heading
+                  color={"white"}
+                  fontSize={{ mdTo2xl: "2xl", mdDown: "xl" }}
+                >
+                  UI/UX
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
-                  I offer IT project management services that keep your projects
-                  on track, within budget, and aligned with your strategic
-                  goals. From planning to execution, I manage every aspect with
-                  attention to detail.
+                  I specialize in creating intuitive and engaging user
+                  interfaces that not only look great but also enhance the
+                  overall user experience. By focusing on the needs and
+                  behaviours of your users, I design seamless, interactive
+                  experiences that drive engagement and satisfaction.
                 </Text>
               </Box>
               <Box
@@ -165,7 +174,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={{mdTo2xl : "47%"}}
+                w={{ mdTo2xl: "47%" }}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -186,7 +195,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 3 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
+                    fontSize={{ mdTo2xl: "7xl", mdDown: "5xl" }}
                   >
                     03
                   </Heading>
@@ -196,14 +205,17 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
-                  Strategic Planning
+                <Heading
+                  color={"white"}
+                  fontSize={{ mdTo2xl: "2xl", mdDown: "xl" }}
+                >
+                  Software Development
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
-                  I offer IT project management services that keep your projects
-                  on track, within budget, and aligned with your strategic
-                  goals. From planning to execution, I manage every aspect with
-                  attention to detail.
+                  I develop robust, scalable applications that meet your
+                  business needs. With expertise in both front-end and back-end
+                  development, I ensure seamless functionality across all
+                  platforms.
                 </Text>
               </Box>
               <Box
@@ -211,7 +223,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={{mdTo2xl : "47%"}}
+                w={{ mdTo2xl: "47%" }}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -232,7 +244,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 4 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
+                    fontSize={{ mdTo2xl: "7xl", mdDown: "5xl" }}
                   >
                     04
                   </Heading>
@@ -242,8 +254,11 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
-                  Management
+                <Heading
+                  color={"white"}
+                  fontSize={{ mdTo2xl: "2xl", mdDown: "xl" }}
+                >
+                  Project Management
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
                   I offer IT project management services that keep your projects
@@ -257,7 +272,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={{mdTo2xl : "47%"}}
+                w={{ mdTo2xl: "47%" }}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -278,7 +293,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 5 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
+                    fontSize={{ mdTo2xl: "7xl", mdDown: "5xl" }}
                   >
                     05
                   </Heading>
@@ -288,14 +303,17 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
-                  Entrepreneurship
+                <Heading
+                  color={"white"}
+                  fontSize={{ mdTo2xl: "2xl", mdDown: "xl" }}
+                >
+                  IT Consultancy
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
-                  I offer IT project management services that keep your projects
-                  on track, within budget, and aligned with your strategic
-                  goals. From planning to execution, I manage every aspect with
-                  attention to detail.
+                  I provide expert advice to help you optimize your IT
+                  infrastructure, improve efficiency, and stay ahead of the
+                  competition. My consultancy services are tailored to meet the
+                  unique challenges of your business.
                 </Text>
               </Box>
               <Box
@@ -303,7 +321,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={{mdTo2xl : "47%"}}
+                w={{ mdTo2xl: "47%" }}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -324,7 +342,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 6 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
+                    fontSize={{ mdTo2xl: "7xl", mdDown: "5xl" }}
                   >
                     06
                   </Heading>
@@ -334,8 +352,11 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
-                  Business Strategy
+                <Heading
+                  color={"white"}
+                  fontSize={{ mdTo2xl: "2xl", mdDown: "xl" }}
+                >
+                  Collaborations
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
                   I offer IT project management services that keep your projects

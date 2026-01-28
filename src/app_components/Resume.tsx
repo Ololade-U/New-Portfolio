@@ -21,59 +21,52 @@ interface IResumeItem {
 }
 
 type IWorkExperience = IResumeItem;
-type IEducation = IResumeItem;
 
 const WorkExperienceData: IWorkExperience[] = [
   {
-    title: "Senior Business Manager and Head of Arravo Academy",
-    companyOrInstitution: "Arravo Technologies",
-    dateRange: "Aug,2024-Present",
+    title: "Frontend Dev and Asst. Project Manager",
+    companyOrInstitution: "Arravo Technology Ltd",
+    dateRange: "Jan 2026-Present",
     description:
-      "Business development, strategy and planning, operational management, financial Management as well as customer focus and compliance and risk management.",
+      "Bridged the gap between technical execution and project delivery by serving as both a Frontend Developer and Project Manager. While architecting responsive, accessible interfaces using React and NextJs, I simultaneously managed project timelines, resource allocation, and stakeholder expectations",
   },
   {
-    title: "CEO / Co-Founder",
-    companyOrInstitution: "Edupoint Limited",
-    dateRange: "Feb,2018-Present",
+    title: "Lecturer",
+    companyOrInstitution: "EduPoint Limited",
+    dateRange: "Jan 2026-Present",
     description:
-      "Led business development and marketing strategies, achieving a 40% increase in sales within a year. Onboarded over 35,000 learners and secured B2B partneships (Private-Private Partnerships and Private-Public Partnerships)",
+      "Delivered lectures to aspiring developers by delivering comprehensive courses on Tech Foundations, covering critical topics such as web architecture, computational logic, and version control",
   },
   {
-    title: "CEO / Co-Founder",
-    companyOrInstitution: "The AgroBarn Limited",
-    dateRange: "Jul,2016-2024",
+    title: "Fullstact Intern",
+    companyOrInstitution: "Arravo Technology Ltd",
+    dateRange: "Aug 2025 - Dec 2025",
     description:
-      "Managed over 10+ employees in the agribusiness operations. Achieved 95% of sales targets, steering the company from startup to a profitable venture within two years.",
+      "Bridged the gap between technical execution and project delivery by serving as both a Frontend Developer and Project Manager. While architecting responsive, accessible interfaces using React and NextJs, I simultaneously managed project timelines, resource allocation, and stakeholder expectations",
   },
   {
-    title: "Co-Founder / Managing Partner",
-    companyOrInstitution: "Growth Capital Group",
-    dateRange: "Jan,2020-2024",
+    title: "Lecturer",
+    companyOrInstitution: "Aptech Education",
+    dateRange: "Aug 2024- March 2025",
     description:
-      "Driving the vision and strategy of Growth Capital Group with a focus on connecting western technologies to emerging markets, using SaaS models.",
+      "Aptech Education is a multinational education-based organization that provides expert IT training and real-world skills to students accross the globe. Delivered Python, html, css and react lectures to student",
+  },
+  {
+    title: "Frontend Dev Intern",
+    companyOrInstitution: "Scutigen",
+    dateRange: "Jan 2024 - Sep 2024",
+    description:
+      "An Innovative Tech community that inspires and develops aspiring developers giving tham platform and experience required via working hand in hand with top developers bring tech dreams to life. Learned to integrate real API endpoints, manage component state, and transform figma into production-ready UIs.",
+  },
+  {
+    title: "Asst. Lecturer",
+    companyOrInstitution: "NIIT",
+    dateRange: "June 2023 - Dec 2023",
+    description:
+      "The National Institute of Information Technology is multinational education-oriented organization focus on inforamtion and computer technology where i served as an assistant lecturer delivering html, css and JavaScript lectures to students",
   },
 ];
 
-const EducationData: IEducation[] = [
-  {
-    title: "Business Administration and Management",
-    companyOrInstitution: "Trinity University",
-    dateRange: "2020-2022",
-    description: "MBA",
-  },
-  {
-    title: "Business Administration and Management",
-    companyOrInstitution: "Alibaba Business School",
-    dateRange: "2020-2020",
-    description: "Mini-MBA Program",
-  },
-  {
-    title: "Animal and Environmental Biology",
-    companyOrInstitution: "University of Benin",
-    dateRange: "2011-2015",
-    description: "Bachelor's Degree",
-  },
-];
 
 const TimelineResumeItem: React.FC<IResumeItem> = ({
   title,
@@ -82,7 +75,7 @@ const TimelineResumeItem: React.FC<IResumeItem> = ({
   description,
 }) => (
   <Timeline.Root>
-    <Flex justifyContent={"space-between"}>
+    <Flex justifyContent={"space-between"} p={'0 1rem'}>
       <Box
         display={"flex"}
         gap={".7rem"}
@@ -217,59 +210,6 @@ const Resume = () => {
             ))}
             <Timeline.Root hideBelow={"md"} colorPalette="teal" size="md">
               {WorkExperienceData.map((item, index) => (
-                <TimelineResumeItem key={`work-${index}`} {...item} />
-              ))}
-            </Timeline.Root>
-          </Flex>
-          <Flex flexDirection={"column"} gap={"2rem"}>
-            <Heading
-              fontWeight={"bold"}
-              color={"white"}
-              display={"flex"}
-              gap={".4rem"}
-              fontSize={{ mdTo2xl: "4xl", mdDown: "3xl" }}
-            >
-              My{" "}
-              <Heading
-                fontSize={{ mdTo2xl: "4xl", mdDown: "3xl" }}
-                fontWeight={"bold"}
-                color={"#00BC91"}
-              >
-                Education
-              </Heading>
-            </Heading>
-            <Text
-              color={"#999999"}
-              fontSize={{ mdTo2xl: "1.1rem", mdDown: ".9rem" }}
-            >
-              A good educational foundation has been instrumental in shaping my
-              expertise and driving my career forward.
-            </Text>
-            {EducationData.map((item, index) => (
-              <Box
-                key={`work-${index}`}
-                border={"1px solid rgba(62, 62, 62, 0.95)"}
-                w={"100%"}
-                p={"1rem .5rem"}
-                borderRadius={".6rem"}
-                display={'flex'}
-                flexDirection={'column'}
-                gap={'1rem'}
-                hideFrom={'md'}
-              >
-                <HStack
-                  fontSize={".9rem"}
-                  justifyContent={"space-between"}
-                >
-                  <Text fontWeight={"bold"}>{item.companyOrInstitution}</Text>
-                  <Text color={"#999999"}>{item.dateRange}</Text>
-                </HStack>
-                <Heading>{item.title}</Heading>
-                <Text fontSize={'.9rem'} color={"#999999"}>{item.description}</Text>
-              </Box>
-            ))}
-            <Timeline.Root hideBelow={"md"} colorPalette="teal" size="md">
-              {EducationData.map((item, index) => (
                 <TimelineResumeItem key={`work-${index}`} {...item} />
               ))}
             </Timeline.Root>

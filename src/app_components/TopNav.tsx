@@ -35,7 +35,7 @@ const TopNav = () => {
           <HStack justifyContent={"space-between"} alignItems={"center"}>
             <Flex alignItems={"center"} gap={".5rem"}>
               <Image src={logo} w={"1.5rem"} />
-              <Heading>Oscar Obiora</Heading>
+              <Heading>Adebayo Uthman</Heading>
             </Flex>
             <Box
               p={".5rem"}
@@ -57,7 +57,7 @@ const TopNav = () => {
           top={"12vh"}
           left={"-70vw"}
           height={"88vh"}
-          width={"70vw"}
+          width={"60vw"}
           bg={"#212223"}
           className={MenuOpen ? "openMenu" : ""}
           transitionProperty={"className"}
@@ -65,7 +65,7 @@ const TopNav = () => {
           hideFrom={"md"}
         >
           <Heading m={"1rem 2rem"}>Menu</Heading>
-          <Stack alignItems={"center"} gap={".7rem"}>
+          <Stack alignItems={"flex-start"} p={'0 2.5rem'} h={'100%'} gap={" 1.5rem"}>
             <HashLink smooth to={"#home"} onClick={() => setMenuOpen(false)}>
               <Text
                 color={active === "Home" ? "white" : "#999999"}

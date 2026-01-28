@@ -11,7 +11,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import myImage from "../assets/Oscar passport.png";
+import myImage from "../assets/myImage.png";
 import TextRotator from "./TextRotator";
 
 const SideBar = () => {
@@ -42,7 +42,7 @@ const SideBar = () => {
             <Image w={"100%"} borderRadius={"50%"} h={"100%"} src={myImage} />
           </Box>
           <Heading color={"white"} fontWeight={"bolder"}>
-            Oscar Obiora
+            Adebayo Uthman
           </Heading>
           <TextRotator />
         </Flex>
@@ -112,7 +112,7 @@ const SideBar = () => {
                   <ProgressCircle.ValueText />
                 </AbsoluteCenter>
               </ProgressCircle.Root>
-              <Text fontSize={'.9rem'} color={"white"}>Research</Text>
+              <Text fontSize={'.9rem'} color={"white"}>React</Text>
             </Stack>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root
@@ -122,7 +122,7 @@ const SideBar = () => {
                 fontWeight={"bolder"}
                 position={"relative"}
                 size={"md"}
-                value={80}
+                value={90}
                 colorPalette={"green"}
               >
                 <ProgressCircle.Circle css={{ "--thickness": "2px" }}>
@@ -133,7 +133,7 @@ const SideBar = () => {
                   <ProgressCircle.ValueText />
                 </AbsoluteCenter>
               </ProgressCircle.Root>
-              <Text fontSize={'.9rem'} color={"white"}>Leadership</Text>
+              <Text fontSize={'.9rem'} color={"white"}>NextJs</Text>
             </Stack>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root
@@ -143,7 +143,7 @@ const SideBar = () => {
                 fontWeight={"bolder"}
                 position={"relative"}
                 size={"md"}
-                value={95}
+                value={85}
                 colorPalette={"green"}
               >
                 <ProgressCircle.Circle css={{ "--thickness": "2px" }}>
@@ -154,7 +154,7 @@ const SideBar = () => {
                   <ProgressCircle.ValueText />
                 </AbsoluteCenter>
               </ProgressCircle.Root>
-              <Text fontSize={'.9rem'} color={"white"}>Coaching</Text>
+              <Text fontSize={'.9rem'} color={"white"}>UI/UX</Text>
             </Stack>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root
@@ -175,7 +175,7 @@ const SideBar = () => {
                   <ProgressCircle.ValueText />
                 </AbsoluteCenter>
               </ProgressCircle.Root>
-              <Text fontSize={'.9rem'} color={"white"}>Coding</Text>
+              <Text fontSize={'.9rem'} color={"white"}>Python</Text>
             </Stack>
           </HStack>
           <Button

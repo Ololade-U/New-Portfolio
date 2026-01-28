@@ -12,25 +12,30 @@ import {
 import { useState, useRef, type RefObject, useEffect } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import {
-  PiMicrosoftExcelLogoLight,
-  PiMicrosoftWordLogoLight,
-  PiMicrosoftTeamsLogoLight,
-  PiMicrosoftPowerpointLogoLight,
-} from "react-icons/pi";
+import { FaReact } from "react-icons/fa";
+import { RiNextjsLine } from "react-icons/ri";
+import { SiTailwindcss } from "react-icons/si";
+import { IoLogoNodejs } from "react-icons/io";
+import { GrMysql } from "react-icons/gr";
+import { FaPython } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
+import { FaGithubSquare } from "react-icons/fa";
 import useStoreQuery from "./Store";
 import { useObserve } from "../hooks/Observe";
+import { SiChakraui } from "react-icons/si";
 
 interface SkillsProps {}
 
 const skillData = [
-  { name: "Excel", value: 90, icon: PiMicrosoftExcelLogoLight },
-  { name: "Word", value: 90, icon: PiMicrosoftWordLogoLight },
-  { name: "Ms Teams", value: 75, icon: PiMicrosoftTeamsLogoLight },
-  { name: "Power Point", value: 90, icon: PiMicrosoftPowerpointLogoLight },
-  { name: "CSS/HTML", value: 80, icon: PiMicrosoftPowerpointLogoLight },
-  { name: "NodeJs", value: 80, icon: PiMicrosoftPowerpointLogoLight },
-  { name: "NextJs", value: 80, icon: PiMicrosoftPowerpointLogoLight },
+  { name: "React", value: 95, icon: FaReact },
+  { name: "Python", value: 70, icon: FaPython },
+  { name: "NextJS", value: 95, icon: RiNextjsLine },
+  { name: "Typescript", value: 90, icon: BiLogoTypescript },
+  { name: "MySql", value: 80, icon: GrMysql },
+  { name: "GitHub", value: 90, icon: FaGithubSquare },
+  { name: "NodeJs", value: 70, icon: IoLogoNodejs},
+  { name: "Tailwind", value: 90, icon: SiTailwindcss },
+  { name: "ChakraUi", value: 90, icon: SiChakraui },
 ];
 const TOTAL_SKILLS = skillData.length;
 

@@ -1,5 +1,6 @@
 import { useObserve } from "../hooks/Observe";
 import { Box, Flex, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import { Tooltip } from "../components/ui/tooltip";
 import { IoMdPerson } from "react-icons/io";
 import useStoreQuery from "./Store";
 import { useEffect } from "react";
@@ -50,14 +51,14 @@ const About = () => {
                 Me
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={{mdTo2xl : "1.1rem", mdDown : '1rem'}}>
-              Seasoned business professional with over a decade years of
-              experience in co-founding and scaling startups across EdTech,
-              AgriTech, and FinTech sectors. Proven track record in driving
-              revenue growth, enhancing operational efficiency, and forging
-              strategic partnerships. Passionate about leveraging technology to
-              solve real-world problems and committed to fostering innovation in
-              emerging markets.
+            <Text
+              color={"#999999"}
+              fontSize={{ mdTo2xl: "1.1rem", mdDown: "1rem" }}
+            >
+              I'm a frontend developer with a keen eye for detail and an
+              obsession with building user-friendly, performant, and accessible
+              websites. I specialize in HTML, CSS, Tailwind CSS, JavaScript, and
+              TypeScript, working primarily with React and Next.js.
             </Text>
             <HStack
               flexWrap={"wrap"}
@@ -69,21 +70,21 @@ const About = () => {
                 p={".2rem 1rem"}
                 borderRadius={"1rem"}
               >
-                {"Microsoft Office (95%)"}
+                {"Web Design (95%)"}
               </Text>
               <Text
                 border={"1px dashed #585858ff"}
                 p={".2rem 1rem"}
                 borderRadius={"1rem"}
               >
-                {"Project Mgt (90%)"}
+                {"UI/UX (90%)"}
               </Text>
               <Text
                 border={"1px dashed #585858ff"}
                 p={".2rem 1rem"}
                 borderRadius={"1rem"}
               >
-                {"Research (90%)"}
+                {"Project Mgt (80%)"}
               </Text>
               <Text
                 border={"1px dashed #585858ff"}
@@ -95,7 +96,7 @@ const About = () => {
             </HStack>
             <HStack
               flexDirection={{ mdDown: "column" }}
-              w={{mdTo2xl : "75%", mdDown : "100%"}}
+              w={{ mdTo2xl: "75%", mdDown: "100%" }}
               gap={{ mdTo2xl: "5.5rem" }}
               // justifyContent={{ mdTo2xl: "center" }}
               alignItems={{ mdDown: "flex-start" }}
@@ -110,7 +111,10 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
+                    <Text
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".8rem" }}
+                      color={"#999999"}
+                    >
                       Phone
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -118,13 +122,13 @@ const About = () => {
                     </Text>
                   </Box>
                   <Text
-                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
+                    fontSize={{ mdTo2xl: ".9rem", mdDown: ".7rem" }}
                     w={"50%"}
                     textAlign={"left"}
                     color={"white"}
                     // minW={'22ch'}
                   >
-                    {"+(234) 000 0000 000"}
+                    {"+(234) 906 8464 735"}
                   </Text>
                 </Flex>
                 <Flex
@@ -136,7 +140,10 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
+                    <Text
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".8rem" }}
+                      color={"#999999"}
+                    >
                       WhatsApp
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -144,12 +151,12 @@ const About = () => {
                     </Text>
                   </Box>
                   <Text
-                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
+                    fontSize={{ mdTo2xl: ".9rem", mdDown: ".7rem" }}
                     w={"50%"}
                     textAlign={"left"}
                     color={"white"}
                   >
-                    {"+(234) 000 0000 000"}
+                    {"+(234) 906 8464 735"}
                   </Text>
                 </Flex>
                 <Flex
@@ -161,7 +168,10 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
+                    <Text
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".8rem" }}
+                      color={"#999999"}
+                    >
                       Language
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -174,7 +184,7 @@ const About = () => {
                     textAlign={"left"}
                     color={"white"}
                   >
-                    English
+                    English, Arabic
                   </Text>
                 </Flex>
               </Stack>
@@ -189,22 +199,30 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
+                    <Text
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".8rem" }}
+                      color={"#999999"}
+                    >
                       Email
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
                       :
                     </Text>
                   </Box>
-                  <Text
-                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
-                    w={"50%"}
-                    textAlign={"left"}
-                    color={"white"}
-                    textWrap={'nowrap'}
-                  >
-                    Oscar.Obiora@arravo.co
-                  </Text>
+                  <Tooltip content="adebayouthman852@gmail.com">
+                    <Text
+                      cursor={"pointer"}
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".7rem" }}
+                      w={"50%"}
+                      textAlign={"left"}
+                      color={"white"}
+                      textWrap={"nowrap"}
+                      textOverflow={"ellipsis"}
+                      overflow={"hidden"}
+                    >
+                      adebayouthman852@gmail.com
+                    </Text>
+                  </Tooltip>
                 </Flex>
                 <Flex
                   w={{ mdTo2xl: "25vw", mdDown: "100%" }}
@@ -215,22 +233,32 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
+                    <Text
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".8rem" }}
+                      color={"#999999"}
+                    >
                       LinkedIn
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
                       :
                     </Text>
                   </Box>
-                  <Text
-                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
-                    w={"50%"}
-                    textAlign={"left"}
-                    color={"white"}
-                    textWrap={'nowrap'}
-                  >
-                    linkedin.com/in/oscarobiora
-                  </Text>
+                  <Tooltip content="linkedin.com/in/adebayo-uthman-38aaa1266/">
+                    <Text
+                      cursor={"pointer"}
+                      fontSize={{ mdTo2xl: ".9rem", mdDown: ".7rem" }}
+                      w={"50%"}
+                      textAlign={"left"}
+                      color={"white"}
+                      textWrap={"nowrap"}
+                      maxW={"45ch"}
+                      textOverflow={"ellipsis"}
+                      // bg={'red'}
+                      overflow={"hidden"}
+                    >
+                      linkedin.com/in/adebayo-uthman-38aaa1266/
+                    </Text>
+                  </Tooltip>
                 </Flex>
                 <Flex
                   w={{ mdTo2xl: "25vw", mdDown: "100%" }}
