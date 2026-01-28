@@ -11,7 +11,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import myImage from "../assets/myImage.png";
+import myImage from "../assets/MyImage.png";
 import TextRotator from "./TextRotator";
 
 const SideBar = () => {
