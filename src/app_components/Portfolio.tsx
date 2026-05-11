@@ -55,7 +55,7 @@ const Portfolio = () => {
     <>
       <Box
         ref={componentRef}
-        p={"2rem"}
+        p={".5rem"}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={{ mdTo2xl: "3rem", mdDown: "1.5rem" }}
@@ -109,7 +109,7 @@ const Portfolio = () => {
           >
             <Box
               py={"1rem"}
-              w={{ smDown: "85%", lgDown: "85%", lgTo2xl: "45%" }}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "45%" }}
               borderRadius={"1rem"}
               border={"#999999 1px solid"}
               _hover={{
@@ -176,7 +176,7 @@ const Portfolio = () => {
             </Box>
             <Box
               py={"1rem"}
-              w={{ smDown: "85%", lgDown: "85%", lgTo2xl: "45%" }}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "45%" }}
               borderRadius={"1rem"}
               border={"#999999 1px solid"}
               _hover={{
@@ -240,7 +240,7 @@ const Portfolio = () => {
             </Box>
             <Box
               py={"1rem"}
-              w={{ smDown: "85%", lgDown: "85%", lgTo2xl: "45%" }}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "45%" }}
               borderRadius={"1rem"}
               border={"1.5px solid #f3f3f3ff"}
               _hover={{
@@ -329,7 +329,7 @@ const Portfolio = () => {
             >
               <Box
                 py={"1rem"}
-                w={{ smDown: "85%", lgDown: "75%", lgTo2xl: "45%" }}
+                w={{ smDown: "95%", lgDown: "85%", lgTo2xl: "45%" }}
                 borderRadius={"1rem"}
                 border={"#999999 1px solid"}
                 _hover={{
