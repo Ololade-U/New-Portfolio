@@ -8,7 +8,7 @@ import {
   MenuContent,
   Link,
 } from "@chakra-ui/react";
-import logo from "../assets/port logo.webp";
+import logo from "../assets/portfolio-logo.png";
 import { IoHome } from "react-icons/io5";
 import { IoMdPerson } from "react-icons/io";
 import { useRef, useState } from "react";
@@ -16,7 +16,6 @@ import { PiToolboxFill } from "react-icons/pi";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
-import { FaMessage } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { IoMdShare } from "react-icons/io";
 import { Tooltip } from "../components/ui/tooltip";
@@ -83,7 +82,7 @@ const NavBar = () => {
         cursor={"pointer"}
         _hover={{ bg: "rgba(250,250,250,.2)" }}
       >
-        <Image src={logo} />
+        <Image src={logo} mr={'.3rem'} />
       </Box>
       <Flex gap={".5rem"} flexDirection={"column"}>
         <Tooltip
@@ -275,37 +274,6 @@ const NavBar = () => {
             <FaListCheck
               size={"1.3rem"}
               fill={active === "Portfolio" ? "#00BC91" : "white"}
-            />
-          </Box>
-        </Tooltip>
-        <Tooltip
-          showArrow
-          positioning={{ placement: "left" }}
-          contentProps={{
-            css: {
-              "--tooltip-bg": "#212223",
-              p: ".5rem 1rem",
-              position: "relative",
-              right: "-.2rem",
-              color: "white",
-            },
-          }}
-          content="Testimonials"
-        >
-          <Box
-            borderRadius={"50%"}
-            display={"flex"}
-            justifyContent={"center"}
-            alignContent={"center"}
-            p={".5rem"}
-            cursor={"pointer"}
-            _hover={{ bg: "rgba(250,250,250,.2)" }}
-            onMouseEnter={() => setActive("Testimonial")}
-            onMouseLeave={() => setActive("")}
-          >
-            <FaMessage
-              size={"1.2rem"}
-              fill={active === "Testimonial" ? "#00BC91" : "white"}
             />
           </Box>
         </Tooltip>

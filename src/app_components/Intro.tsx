@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { IoHome } from "react-icons/io5";
-import main from "../assets/main logo.webp";
+import main from "../assets/uthman-logo.png";
 import { FaCheckDouble } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import myPic from "../assets/MyPicture2.png";

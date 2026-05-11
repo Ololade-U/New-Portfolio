@@ -128,17 +128,15 @@ const Portfolio = () => {
                   alignSelf={"flex-start"}
                   fontWeight={"bold"}
                   fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
-                  border={{
-                    _light: "1px solid black",
-                    _dark: "1px solid #e3e3e3",
-                  }}
+                  border={"1px solid #e3e3e3"}
+                  color={"#999999"}
                 >
                   Movie Recommendation Website
                 </Text>
                 <Heading fontSize={"2xl"} fontWeight={"bold"}>
                   MovieXYZ
                 </Heading>
-                <Text>
+                <Text color={"#999999"}>
                   A movie recommendation site that provides you with the lastest
                   movies and series update and also allows you filter by genre,
                   search and fan rating.
@@ -197,17 +195,15 @@ const Portfolio = () => {
                   alignSelf={"flex-start"}
                   fontWeight={"bold"}
                   fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
-                  border={{
-                    _light: "1px solid black",
-                    _dark: "1px solid #e3e3e3",
-                  }}
+                  border={"1px solid #e3e3e3"}
+                  color={"#999999"}
                 >
                   E-commerce Website
                 </Text>
                 <Heading fontSize={"2xl"} fontWeight={"bold"}>
                   Fresh Harvest Hub
                 </Heading>
-                <Text>
+                <Text color={"#999999"}>
                   An e-commerce platform that connects local farmers with
                   consumers eliminating third parties, providing fresh and
                   organic produce directly from the farm to your doorstep.
@@ -246,19 +242,10 @@ const Portfolio = () => {
               py={"1rem"}
               w={{ smDown: "85%", lgDown: "85%", lgTo2xl: "45%" }}
               borderRadius={"1rem"}
-              border={{
-                _dark: "1.5px solid #f3f3f3ff",
-                _light: "1.5px solid #e3e3e3",
-              }}
+              border={"1.5px solid #f3f3f3ff"}
               _hover={{
-                _dark: {
-                  transform: "scale(1.03)",
-                  border: "1.5px solid #b8b6b6ff",
-                },
-                _light: {
-                  transform: "scale(1.03)",
-                  border: "1.5px solid black",
-                },
+                transform: "scale(1.03)",
+                border: "1.5px solid #b8b6b6ff",
               }}
               transitionProperty={"transorm border"}
               transitionDuration={".3s"}
@@ -273,13 +260,14 @@ const Portfolio = () => {
                   fontWeight={"bold"}
                   fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
                   border={"#999999 1px solid"}
+                  color={"#999999"}
                 >
                   Brick Breaker Game
                 </Text>
                 <Heading fontSize={"2xl"} fontWeight={"bold"}>
                   Brick Breaker
                 </Heading>
-                <Text>Fun and games.</Text>
+                <Text color={"#999999"}>Fun and games.</Text>
                 <Flex
                   flexWrap={"wrap"}
                   alignItems={"center"}
@@ -336,7 +324,9 @@ const Portfolio = () => {
                 Projects
               </Heading>
             </Heading>
-            <HStack justifyContent={{mdTo2xl : 'space-between', mdDown : 'center'}}>
+            <HStack
+              justifyContent={{ mdTo2xl: "space-between", mdDown: "center" }}
+            >
               <Box
                 py={"1rem"}
                 w={{ smDown: "85%", lgDown: "75%", lgTo2xl: "45%" }}
@@ -358,17 +348,15 @@ const Portfolio = () => {
                     alignSelf={"flex-start"}
                     fontWeight={"bold"}
                     fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
-                    border={{
-                      _light: "1px solid black",
-                      _dark: "1px solid #e3e3e3",
-                    }}
+                    border={"1px solid #e3e3e3"}
+                    color={'#999999'}
                   >
                     Metrics and Data Management
                   </Text>
                   <Heading fontSize={"2xl"} fontWeight={"bold"}>
                     NITT
                   </Heading>
-                  <Text>
+                  <Text color={"#999999"}>
                     I featured as a frontend developer in the development of
                     this metrics and data management platform for the National
                     institute of Transport Technology (NITT).
@@ -415,3 +403,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+

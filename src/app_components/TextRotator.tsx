@@ -2,8 +2,8 @@ import  { useState, useEffect } from 'react';
 import './TextRotator.css';
 
 const TEXTS = [
-  "Product Designer",
-  "FrontEnd Dev",
+  "Software Engineer",
+  "Fullstack Developer",
   "UI/UX Designer",
   "Web Designer",
 ];

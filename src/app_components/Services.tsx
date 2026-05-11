@@ -359,10 +359,10 @@ const Services = () => {
                   Collaborations
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
-                  I offer IT project management services that keep your projects
-                  on track, within budget, and aligned with your strategic
-                  goals. From planning to execution, I manage every aspect with
-                  attention to detail.
+                  I partner with teams, agencies, and clients to bring shared
+                  ideas to life. Through clear communication and collaborative
+                  workflows, I help align creative, technical, and strategic
+                  efforts for stronger, faster results.
                 </Text>
               </Box>
             </HStack>

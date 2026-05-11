@@ -154,7 +154,7 @@ const SideBar = () => {
                   <ProgressCircle.ValueText />
                 </AbsoluteCenter>
               </ProgressCircle.Root>
-              <Text fontSize={'.9rem'} color={"white"}>UI/UX</Text>
+              <Text fontSize={'.9rem'} color={"white"}>Java</Text>
             </Stack>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root

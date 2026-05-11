@@ -7,7 +7,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import logo from "../assets/port logo.webp";
+import logo from "../assets/portfolio-logo.png";
 import { TbMenuDeep } from "react-icons/tb";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";

@@ -23,11 +23,13 @@ import { FaGithubSquare } from "react-icons/fa";
 import useStoreQuery from "./Store";
 import { useObserve } from "../hooks/Observe";
 import { SiChakraui } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 interface SkillsProps {}
 
 const skillData = [
   { name: "React", value: 95, icon: FaReact },
+  { name: "Java", value: 85, icon: FaJava },
   { name: "Python", value: 70, icon: FaPython },
   { name: "NextJS", value: 95, icon: RiNextjsLine },
   { name: "Typescript", value: 90, icon: BiLogoTypescript },

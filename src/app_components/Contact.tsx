@@ -91,7 +91,7 @@ const Contact = () => {
                   <Stack gap={"0"}>
                     <Heading color={"white"}>Email</Heading>
                     <Text color={"#999999"} fontSize={".8rem"}>
-                      Oscarobiora@gmail.com
+                      uthmanadebayo852@gmail.com
                     </Text>
                   </Stack>
                 </Flex>
@@ -100,7 +100,7 @@ const Contact = () => {
                   <Stack gap={"0"}>
                     <Heading color={"white"}>Phone</Heading>
                     <Text color={"#999999"} fontSize={".8rem"}>
-                      +234 816 745 4539
+                      +234 906 846 4735
                     </Text>
                   </Stack>
                 </Flex>
@@ -178,7 +178,7 @@ const Contact = () => {
         textWrap={"nowrap"}
         color={"#999999"}
       >
-        &copy; 2026 Oscar Obiora. All rights reserved.
+        &copy; 2026 Adebayo Uthman. All rights reserved.
       </Text>
     </>
   );

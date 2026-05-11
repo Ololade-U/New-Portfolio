@@ -55,10 +55,13 @@ const About = () => {
               color={"#999999"}
               fontSize={{ mdTo2xl: "1.1rem", mdDown: "1rem" }}
             >
-              I'm a frontend developer with a keen eye for detail and an
-              obsession with building user-friendly, performant, and accessible
-              websites. I specialize in HTML, CSS, Tailwind CSS, JavaScript, and
-              TypeScript, working primarily with React and Next.js.
+              Innovative Software Engineer with 3+ years of Software Engineering
+              focused on Frontend Development with exposure to Backend
+              Development, adept at transforming design concepts into
+              high-performance, user-friendly interfaces. Experienced in
+              teaching and mentoring, with a strong commitment to continuous
+              learning and delivering impactful digital solutions that enhance
+              user experience and business outcomes.
             </Text>
             <HStack
               flexWrap={"wrap"}
@@ -91,7 +94,7 @@ const About = () => {
                 p={".2rem 1rem"}
                 borderRadius={"1rem"}
               >
-                {"Research (85%)"}
+                {"Software Dev (85%)"}
               </Text>
             </HStack>
             <HStack
@@ -298,7 +301,7 @@ const About = () => {
                   fontWeight={"bold"}
                   color={"#00BC91"}
                 >
-                  10+
+                  3+
                 </Heading>
                 <Text color={"#999999"}>Years Of Experience</Text>
               </Stack>
@@ -308,7 +311,7 @@ const About = () => {
                   fontWeight={"bold"}
                   color={"#00BC91"}
                 >
-                  30+
+                  7+
                 </Heading>
                 <Text color={"#999999"}>Handled Projects</Text>
               </Stack>
@@ -318,9 +321,9 @@ const About = () => {
                   fontWeight={"bold"}
                   color={"#00BC91"}
                 >
-                  100+
+                  10+
                 </Heading>
-                <Text color={"#999999"}>People Trained</Text>
+                <Text color={"#999999"}>Projects Deployed</Text>
               </Stack>
               <Stack w={{ mdDown: "40%" }} gap={"0"}>
                 <Heading
@@ -328,9 +331,9 @@ const About = () => {
                   fontWeight={"bold"}
                   color={"#00BC91"}
                 >
-                  20+
+                  5+
                 </Heading>
-                <Text color={"#999999"}>Consultancy Services</Text>
+                <Text color={"#999999"}>Featured Projects</Text>
               </Stack>
             </HStack>
           </Flex>
