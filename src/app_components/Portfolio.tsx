@@ -162,7 +162,7 @@ const Portfolio = () => {
                   ))}
                 </Flex>
                 <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
-                  <a href="https://moviessxyz.netlify.app/" target="_blank">
+                  <a href="https://movie-xyz-red.vercel.app/" target="_blank">
                     <IoLink size={"1.8rem"} />
                   </a>
                   <a
@@ -229,7 +229,7 @@ const Portfolio = () => {
                   ))}
                 </Flex>
                 <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
-                  <a href="https://local-line.netlify.app/" target="_blank">
+                  <a href="https://fresh-harvest-hub.vercel.app/" target="_blank">
                     <IoLink size={"1.8rem"} />
                   </a>
                   <a href="https://github.com/Ololade-U/e-farm" target="_blank">
@@ -290,7 +290,7 @@ const Portfolio = () => {
                 </Flex>
                 <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
                   <a
-                    href="https://brick-breakerapp.netlify.app/"
+                    href="https://brick-breakerr.vercel.app/"
                     target="_blank"
                   >
                     <IoLink size={"1.8rem"} />

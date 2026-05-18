@@ -22,7 +22,7 @@ const TopNav = () => {
       <Box position={"relative"} w={"100vw"}>
         <Box
           position={"fixed"}
-          h={"12vh"}
+          h={"11vh"}
           w={"100%"}
           zIndex={"5000"}
           hideFrom={"md"}
