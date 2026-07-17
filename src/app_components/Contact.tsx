@@ -139,78 +139,77 @@ const Contact = () => {
                   </Stack>
                 </Flex>
               </Stack>
-              <Stack
-                as={"form"}
-                ref={formRef}
-                onSubmit={handleSubmit}
-                gap={{ mdTo2xl: "2rem", mdDown: "1rem" }}
-                w={"100%"}
-                justifyContent={"space-between"}
-              >
-                <Flex>
-                  <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
-                    <Fieldset.Content>
-                      <Field.Root>
-                        <Input
-                          border={"1px solid #999999"}
-                          color={"white"}
-                          name="name"
-                          placeholder="Name"
-                          pl={".5rem"}
-                          required
-                        />
-                      </Field.Root>
-                    </Fieldset.Content>
-                  </Fieldset.Root>
-                </Flex>
-                <Flex>
-                  <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
-                    <Fieldset.Content>
-                      <Field.Root>
-                        <Input
-                          type="email"
-                          border={"1px solid #999999"}
-                          color={"white"}
-                          name="email"
-                          placeholder="E-mail"
-                          pl={".5rem"}
-                          required
-                        />
-                      </Field.Root>
-                    </Fieldset.Content>
-                  </Fieldset.Root>
-                </Flex>
-                <Flex>
-                  <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
-                    <Fieldset.Content>
-                      <Field.Root>
-                        <Textarea
-                          minH={"20vh"}
-                          border={"1px solid #999999"}
-                          color={"white"}
-                          name="message"
-                          placeholder="Message"
-                          p={".5rem"}
-                          required
-                        />
-                      </Field.Root>
-                    </Fieldset.Content>
-                  </Fieldset.Root>
-                </Flex>
-                <Button
-                  type="submit"
-                  loading={isSending}
-                  disabled={isSending}
-                  p={{ mdTo2xl: "1.8rem 1.6rem", mdDown: "1rem 1.2rem" }}
-                  fontSize={{ mdTo2xl: "1.2rem", mdDown: "1rem" }}
-                  fontWeight={"initial"}
-                  borderRadius={"2rem"}
-                  bg={"#00BC91"}
-                  w={"fit-content"}
+              <form ref={formRef} onSubmit={handleSubmit} style={{ width: "100%" }}>
+                <Stack
+                  gap={{ mdTo2xl: "2rem", mdDown: "1rem" }}
+                  w={"100%"}
+                  justifyContent={"space-between"}
                 >
-                  {isSending ? "Sending..." : "Send Message"}
-                </Button>
-              </Stack>
+                  <Flex>
+                    <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
+                      <Fieldset.Content>
+                        <Field.Root>
+                          <Input
+                            border={"1px solid #999999"}
+                            color={"white"}
+                            name="name"
+                            placeholder="Name"
+                            pl={".5rem"}
+                            required
+                          />
+                        </Field.Root>
+                      </Fieldset.Content>
+                    </Fieldset.Root>
+                  </Flex>
+                  <Flex>
+                    <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
+                      <Fieldset.Content>
+                        <Field.Root>
+                          <Input
+                            type="email"
+                            border={"1px solid #999999"}
+                            color={"white"}
+                            name="email"
+                            placeholder="E-mail"
+                            pl={".5rem"}
+                            required
+                          />
+                        </Field.Root>
+                      </Fieldset.Content>
+                    </Fieldset.Root>
+                  </Flex>
+                  <Flex>
+                    <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
+                      <Fieldset.Content>
+                        <Field.Root>
+                          <Textarea
+                            minH={"20vh"}
+                            border={"1px solid #999999"}
+                            color={"white"}
+                            name="message"
+                            placeholder="Message"
+                            p={".5rem"}
+                            required
+                          />
+                        </Field.Root>
+                      </Fieldset.Content>
+                    </Fieldset.Root>
+                  </Flex>
+                  <Button
+                    type="submit"
+                    loading={isSending}
+                    disabled={isSending}
+                    p={{ mdTo2xl: "1.8rem 1.6rem", mdDown: "1rem 1.2rem" }}
+                    fontSize={{ mdTo2xl: "1.2rem", mdDown: "1rem" }}
+                    fontWeight={"initial"}
+                    borderRadius={"2rem"}
+                    bg={"#00BC91"}
+                    w={"fit-content"}
+                  >
+                    {isSending ? "Sending..." : "Send Message"}
+                  </Button>
+                </Stack>
+              </form>
             </Box>
           </Flex>
         </Stack>
