@@ -6,6 +6,7 @@ import NavBar from "./app_components/NavBar";
 import MainPage from "./app_components/MainPage";
 import TopNav from "./app_components/TopNav";
 import Loader from "./app_components/Loader";
+import { Toaster } from "./components/ui/toaster";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ const App = () => {
   return (
     <>
       <Loader visible={loading} />
+      <Toaster />
       <section className="gen-cont">
         <BackgroundAnimation />
         <TopNav />

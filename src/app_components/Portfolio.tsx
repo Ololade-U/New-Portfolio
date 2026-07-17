@@ -11,6 +11,7 @@ import { FaListCheck } from "react-icons/fa6";
 import { IoLink } from "react-icons/io5";
 import { VscGithubAlt } from "react-icons/vsc";
 import movie from "../assets/MovieXYZ - Google Chrome 8_20_2025 11_47_13 AM.png";
+import game from "../assets/Gamr.png";
 import local from "../assets/local.png";
 import brick from "../assets/Screenshot (1).png";
 import nitt from "../assets/Nitt.png";
@@ -24,6 +25,13 @@ const Portfolio = () => {
     "TypeScript",
     "Chakra UI",
     "TMDB API",
+    "Zustand",
+  ];
+  const gameStack = [
+    "NextJs",
+    "TypeScript",
+    "Chakra UI",
+    "Rawg API",
     "Zustand",
   ];
   const localStack = [
@@ -55,7 +63,7 @@ const Portfolio = () => {
     <>
       <Box
         ref={componentRef}
-        p={".5rem"}
+        p={{mdTo2xl :"1rem 2rem", mdDown: ".5rem" }}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={{ mdTo2xl: "3rem", mdDown: "1.5rem" }}
@@ -109,14 +117,80 @@ const Portfolio = () => {
           >
             <Box
               py={"1rem"}
-              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "45%" }}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "46%" }}
               borderRadius={"1rem"}
               border={"#999999 1px solid"}
               _hover={{
                 transform: "scale(1.03)",
                 border: "1.5px solid #b8b6b6ff",
               }}
-              transitionProperty={"transorm border"}
+              transitionProperty={"transform, border"}
+              transitionDuration={".3s"}
+            >
+              <Image border={"none"} src={game} mb={"1rem"} />
+              <Stack px={"1rem"}>
+                <Text
+                  px={".5rem"}
+                  borderRadius={"2rem"}
+                  display={"inline"}
+                  alignSelf={"flex-start"}
+                  fontWeight={"bold"}
+                  fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
+                  border={"1px solid #e3e3e3"}
+                  color={"#999999"}
+                >
+                  Game Recommendation Website
+                </Text>
+                <Heading color={"white"} fontSize={"2xl"} fontWeight={"bold"}>
+                  Gamr
+                </Heading>
+                <Text color={"#999999"}>
+                  Explore the latest releases, track patch updates, and filter by your favorite genres. Search, rate, and curate your ultimate gaming library.
+                </Text>
+                <Flex
+                  flexWrap={"wrap"}
+                  alignItems={"center"}
+                  gap={".4rem"}
+                  my={".3rem"}
+                >
+                  {gameStack.map((tech) => (
+                    <Text
+                      key={tech}
+                      opacity={{ _light: ".7" }}
+                      color={{ _dark: "black" }}
+                      fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
+                      fontWeight={"semibold"}
+                      bgColor={"#ebebebff"}
+                      p={".2rem .7rem"}
+                      borderRadius={"1rem"}
+                    >
+                      {tech}
+                    </Text>
+                  ))}
+                </Flex>
+                <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
+                  <a href="https://movie-xyz-red.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <IoLink size={"1.8rem"} />
+                  </a>
+                  <a
+                    href="https://github.com/Ololade-U/MovieXYZ"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    <VscGithubAlt size={"1.8rem"} />
+                  </a>
+                </Flex>
+              </Stack>
+            </Box>
+            <Box
+              py={"1rem"}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "46%" }}
+              borderRadius={"1rem"}
+              border={"#999999 1px solid"}
+              _hover={{
+                transform: "scale(1.03)",
+                border: "1.5px solid #b8b6b6ff",
+              }}
+              transitionProperty={"transform, border"}
               transitionDuration={".3s"}
             >
               <Image border={"none"} src={movie} mb={"1rem"} />
@@ -133,7 +207,7 @@ const Portfolio = () => {
                 >
                   Movie Recommendation Website
                 </Text>
-                <Heading fontSize={"2xl"} fontWeight={"bold"}>
+                <Heading color={"white"} fontSize={"2xl"} fontWeight={"bold"}>
                   MovieXYZ
                 </Heading>
                 <Text color={"#999999"}>
@@ -149,6 +223,7 @@ const Portfolio = () => {
                 >
                   {moviesStack.map((tech) => (
                     <Text
+                      key={tech}
                       opacity={{ _light: ".7" }}
                       color={{ _dark: "black" }}
                       fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
@@ -162,12 +237,12 @@ const Portfolio = () => {
                   ))}
                 </Flex>
                 <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
-                  <a href="https://movie-xyz-red.vercel.app/" target="_blank">
+                  <a href="https://movie-xyz-red.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <IoLink size={"1.8rem"} />
                   </a>
                   <a
                     href="https://github.com/Ololade-U/MovieXYZ"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     <VscGithubAlt size={"1.8rem"} />
                   </a>
@@ -176,14 +251,14 @@ const Portfolio = () => {
             </Box>
             <Box
               py={"1rem"}
-              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "45%" }}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "46%" }}
               borderRadius={"1rem"}
               border={"#999999 1px solid"}
               _hover={{
                 transform: "scale(1.03)",
                 border: "1.5px solid #b8b6b6ff",
               }}
-              transitionProperty={"transorm border"}
+              transitionProperty={"transform, border"}
               transitionDuration={".3s"}
             >
               <Image border={"none"} src={local} mb={"1rem"} />
@@ -200,7 +275,7 @@ const Portfolio = () => {
                 >
                   E-commerce Website
                 </Text>
-                <Heading fontSize={"2xl"} fontWeight={"bold"}>
+                <Heading color={"white"} fontSize={"2xl"} fontWeight={"bold"}>
                   Fresh Harvest Hub
                 </Heading>
                 <Text color={"#999999"}>
@@ -216,6 +291,7 @@ const Portfolio = () => {
                 >
                   {localStack.map((tech) => (
                     <Text
+                      key={tech}
                       opacity={{ _light: ".7" }}
                       color={{ _dark: "black" }}
                       fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
@@ -229,10 +305,10 @@ const Portfolio = () => {
                   ))}
                 </Flex>
                 <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
-                  <a href="https://fresh-harvest-hub.vercel.app/" target="_blank">
+                  <a href="https://fresh-harvest-hub.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <IoLink size={"1.8rem"} />
                   </a>
-                  <a href="https://github.com/Ololade-U/e-farm" target="_blank">
+                  <a href="https://github.com/Ololade-U/e-farm" target="_blank" rel="noopener noreferrer">
                     <VscGithubAlt size={"1.8rem"} />
                   </a>
                 </Flex>
@@ -240,14 +316,14 @@ const Portfolio = () => {
             </Box>
             <Box
               py={"1rem"}
-              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "45%" }}
+              w={{ smDown: "95%", lgDown: "95%", lgTo2xl: "46%" }}
               borderRadius={"1rem"}
               border={"1.5px solid #f3f3f3ff"}
               _hover={{
                 transform: "scale(1.03)",
                 border: "1.5px solid #b8b6b6ff",
               }}
-              transitionProperty={"transorm border"}
+              transitionProperty={"transform, border"}
               transitionDuration={".3s"}
             >
               <Image border={"none"} src={brick} mb={"1.5rem"} />
@@ -264,7 +340,7 @@ const Portfolio = () => {
                 >
                   Brick Breaker Game
                 </Text>
-                <Heading fontSize={"2xl"} fontWeight={"bold"}>
+                <Heading color={"white"} fontSize={"2xl"} fontWeight={"bold"}>
                   Brick Breaker
                 </Heading>
                 <Text color={"#999999"}>Fun and games.</Text>
@@ -276,6 +352,7 @@ const Portfolio = () => {
                 >
                   {brickStack.map((tech) => (
                     <Text
+                      key={tech}
                       opacity={{ _light: ".7" }}
                       color={{ _dark: "black" }}
                       fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
@@ -291,13 +368,13 @@ const Portfolio = () => {
                 <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
                   <a
                     href="https://brick-breakerr.vercel.app/"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     <IoLink size={"1.8rem"} />
                   </a>
                   <a
                     href="https://github.com/Ololade-U/Brick-breaker"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     <VscGithubAlt size={"1.8rem"} />
                   </a>
@@ -329,14 +406,14 @@ const Portfolio = () => {
             >
               <Box
                 py={"1rem"}
-                w={{ smDown: "95%", lgDown: "85%", lgTo2xl: "45%" }}
+                w={{ smDown: "95%", lgDown: "85%", lgTo2xl: "46%" }}
                 borderRadius={"1rem"}
                 border={"#999999 1px solid"}
                 _hover={{
                   transform: "scale(1.03)",
                   border: "1.5px solid #b8b6b6ff",
                 }}
-                transitionProperty={"transorm border"}
+                transitionProperty={"transform, border"}
                 transitionDuration={".3s"}
               >
                 <Image border={"none"} src={nitt} mb={"1rem"} />
@@ -353,7 +430,7 @@ const Portfolio = () => {
                   >
                     Metrics and Data Management
                   </Text>
-                  <Heading fontSize={"2xl"} fontWeight={"bold"}>
+                  <Heading color={"white"} fontSize={"2xl"} fontWeight={"bold"}>
                     NITT
                   </Heading>
                   <Text color={"#999999"}>
@@ -369,6 +446,7 @@ const Portfolio = () => {
                   >
                     {nittStack.map((tech) => (
                       <Text
+                        key={tech}
                         opacity={{ _light: ".7" }}
                         color={{ _dark: "black" }}
                         fontSize={{ smTo2xl: "sm", smDown: "x-small" }}
@@ -382,12 +460,12 @@ const Portfolio = () => {
                     ))}
                   </Flex>
                   <Flex gap={"1rem"} align={"center"} mt={"1rem"}>
-                    <a href="https://local-line.netlify.app/" target="_blank">
+                    <a href="https://local-line.netlify.app/" target="_blank" rel="noopener noreferrer">
                       <IoLink size={"1.8rem"} />
                     </a>
                     <a
                       href="https://github.com/Ololade-U/e-farm"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <VscGithubAlt size={"1.8rem"} />
                     </a>

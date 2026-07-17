@@ -15,17 +15,51 @@ import { TfiLocationPin } from "react-icons/tfi";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import { useObserve } from "../hooks/Observe";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import useStoreQuery from "./Store";
+import emailjs from "@emailjs/browser";
+import { toaster } from "../components/ui/toaster";
 
 const Contact = () => {
   const { componentRef, isInView } = useObserve();
   const setActiveNav = useStoreQuery((s) => s.setActiveNav);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
   useEffect(() => {
     if (isInView) {
       setActiveNav("Contact");
     }
   }, [isInView, setActiveNav]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    setIsSending(true);
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      );
+      toaster.create({
+        title: "Message sent",
+        description: "Thanks for reaching out — I'll get back to you soon.",
+        type: "success",
+      });
+      formRef.current.reset();
+    } catch {
+      toaster.create({
+        title: "Something went wrong",
+        description: "Please try again or email me directly.",
+        type: "error",
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <>
       <Box
@@ -106,6 +140,9 @@ const Contact = () => {
                 </Flex>
               </Stack>
               <Stack
+                as={"form"}
+                ref={formRef}
+                onSubmit={handleSubmit}
                 gap={{ mdTo2xl: "2rem", mdDown: "1rem" }}
                 w={"100%"}
                 justifyContent={"space-between"}
@@ -120,6 +157,7 @@ const Contact = () => {
                           name="name"
                           placeholder="Name"
                           pl={".5rem"}
+                          required
                         />
                       </Field.Root>
                     </Fieldset.Content>
@@ -130,11 +168,13 @@ const Contact = () => {
                     <Fieldset.Content>
                       <Field.Root>
                         <Input
+                          type="email"
                           border={"1px solid #999999"}
                           color={"white"}
-                          name="name"
+                          name="email"
                           placeholder="E-mail"
                           pl={".5rem"}
+                          required
                         />
                       </Field.Root>
                     </Fieldset.Content>
@@ -148,15 +188,19 @@ const Contact = () => {
                           minH={"20vh"}
                           border={"1px solid #999999"}
                           color={"white"}
-                          name="name"
+                          name="message"
                           placeholder="Message"
                           p={".5rem"}
+                          required
                         />
                       </Field.Root>
                     </Fieldset.Content>
                   </Fieldset.Root>
                 </Flex>
                 <Button
+                  type="submit"
+                  loading={isSending}
+                  disabled={isSending}
                   p={{ mdTo2xl: "1.8rem 1.6rem", mdDown: "1rem 1.2rem" }}
                   fontSize={{ mdTo2xl: "1.2rem", mdDown: "1rem" }}
                   fontWeight={"initial"}
@@ -164,7 +208,7 @@ const Contact = () => {
                   bg={"#00BC91"}
                   w={"fit-content"}
                 >
-                  Send Message
+                  {isSending ? "Sending..." : "Send Message"}
                 </Button>
               </Stack>
             </Box>

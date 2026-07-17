@@ -64,40 +64,6 @@ const About = () => {
               user experience and business outcomes.
             </Text>
             <HStack
-              flexWrap={"wrap"}
-              justifyContent={{ mdTo2xl: "space-between" }}
-              color={"#999999"}
-            >
-              <Text
-                border={"1px dashed #585858ff"}
-                p={".2rem 1rem"}
-                borderRadius={"1rem"}
-              >
-                {"Web Design (95%)"}
-              </Text>
-              <Text
-                border={"1px dashed #585858ff"}
-                p={".2rem 1rem"}
-                borderRadius={"1rem"}
-              >
-                {"UI/UX (90%)"}
-              </Text>
-              <Text
-                border={"1px dashed #585858ff"}
-                p={".2rem 1rem"}
-                borderRadius={"1rem"}
-              >
-                {"Project Mgt (80%)"}
-              </Text>
-              <Text
-                border={"1px dashed #585858ff"}
-                p={".2rem 1rem"}
-                borderRadius={"1rem"}
-              >
-                {"Software Dev (85%)"}
-              </Text>
-            </HStack>
-            <HStack
               flexDirection={{ mdDown: "column" }}
               w={{ mdTo2xl: "75%", mdDown: "100%" }}
               gap={{ mdTo2xl: "5.5rem" }}

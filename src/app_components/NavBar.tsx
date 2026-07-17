@@ -46,6 +46,10 @@ const NavBar = () => {
     }, closeDelay);
   };
 
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const horizontalMenuItems = [
     {
       value: "Twitter",
@@ -110,6 +114,7 @@ const NavBar = () => {
             bg={active === "Home" ? "rgba(250,250,250,.2)" : ""}
             onMouseEnter={() => setActive("Home")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("intro")}
           >
             <IoHome
               size={"1.3rem"}
@@ -142,6 +147,7 @@ const NavBar = () => {
             bg={active === "About" ? "rgba(250,250,250,.2)" : ""}
             onMouseEnter={() => setActive("About")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("about")}
           >
             <IoMdPerson
               size={"1.3rem"}
@@ -174,6 +180,7 @@ const NavBar = () => {
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Service")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("services")}
           >
             <PiToolboxFill
               size={"1.3rem"}
@@ -206,6 +213,7 @@ const NavBar = () => {
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Skills")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("skills")}
           >
             <FaGraduationCap
               size={"1.3rem"}
@@ -238,6 +246,7 @@ const NavBar = () => {
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Resume")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("resume")}
           >
             <FaFileAlt
               size={"1.3rem"}
@@ -270,6 +279,7 @@ const NavBar = () => {
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Portfolio")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("portfolio")}
           >
             <FaListCheck
               size={"1.3rem"}
@@ -302,6 +312,7 @@ const NavBar = () => {
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Contact")}
             onMouseLeave={() => setActive("")}
+            onClick={() => scrollToSection("contact")}
           >
             <IoIosMail
               size={"1.3rem"}
@@ -314,7 +325,7 @@ const NavBar = () => {
       <Box pos={"relative"}>
         <Menu.Root
           open={open}
-          onOpenChange={() => setOpen}
+          onOpenChange={(details) => setOpen(details.open)}
           positioning={{ placement: "left-start" }}
         >
           <MenuTrigger
@@ -348,9 +359,14 @@ const NavBar = () => {
             bg={"#212223"}
           >
             {horizontalMenuItems.map((item) => (
-              <Link href={item.link} target="_blank" tabIndex={-1}>
+              <Link
+                key={item.value}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={-1}
+              >
                 <Menu.Item
-                  key={item.value}
                   value={item.value}
                   width="2rem"
                   cursor={"pointer"}

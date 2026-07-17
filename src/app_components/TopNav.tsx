@@ -60,8 +60,6 @@ const TopNav = () => {
           width={"60vw"}
           bg={"#212223"}
           className={MenuOpen ? "openMenu" : ""}
-          transitionProperty={"className"}
-          transitionDuration={".3s"}
           hideFrom={"md"}
         >
           <Heading m={"1rem 2rem"}>Menu</Heading>
